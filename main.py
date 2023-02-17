@@ -1141,7 +1141,7 @@ async def games(message):
 
 
     if txt == "":
-        txt = "Hiçbir oyun yok."
+        txt = "Heç bir oyun yoxdur."
 
         
     # Split the text each 3000 characters.
@@ -2768,7 +2768,7 @@ async def messages(mesaj):
                     keyboard = types.InlineKeyboardMarkup()
                     callback_button = types.InlineKeyboardButton(text="Aparıcı olmağ istəyirəm🙋‍♂️.", callback_data=f'istiyorum_sessiz_sinema_{mod}_{user_id}')
                     keyboard.add(callback_button)
-                    await bot.send_message(chat_id,f'''Düz cevap → <b>{kelime}</b> ✅
+                    await bot.send_message(chat_id,f'''Düzgün cavab → <b>{kelime}</b> ✅
 
 <a href="tg://user?id={user_id}"><b>{first_name}</b></a> doğru tapdı''', reply_markup=keyboard)
                 
