@@ -1240,10 +1240,27 @@ async def dogruluk(message):
 
 
 
+#help @edalet_22
+@bot.message_handler(commands=['help'])
+async def start_private(message): #, **kwargs
+    chat_tipi = message.chat.type
 
+    chat_id = message.chat.id #değişken, private veya group
+    user_id = message.from_user.id #sabit    
 
+    msg = message.text
+            keyboard = types.InlineKeyboardMarkup()
 
+           keyboard = types.InlineKeyboardMarkup()
 
+            callback_button = types.InlineKeyboardButton(text= Feedback 📮, url="https://t.me/sjrvan")
+            callback_button2 = types.InlineKeyboardButton(text="Rəsmi kanal ⚙️", url="https://t.me/BlazeNewsaz")
+            keyboard.add(callback_button)
+            keyboard.add(callback_button2)            
+            
+            await bot.send_message(chat_id, f'<b>BlazeGameazbot Əmrləri:.\n\n/start - botu başlat\n/game - oyunu başlat\n/stop - oyunu saxla\n/rating - Ümumi istatistika\n/dogruluq - Doğruluq sualı\n/cesaret - Cəsarət sualı\n📣 Xoş oyunlar</b>',  reply_markup=keyboard)
+
+# help hissəs bitdi 
 @bot.message_handler(commands=['rating'])
 async def skorlar_komut(message):    #chat_tipi = message.chat.type
     chat_id = message.chat.id #değişken, private veya group
