@@ -629,7 +629,7 @@ async def sessiz_sinema_baslat(message, **kwargs):
 
     # Oyun var.
 
-    text = kwargs.get("text", f'<a href="tg://user?id={user_id}">{first_name}</a> 🎙 sözünü təqdim edir')
+    text = kwargs.get("text", f'<a href="tg://user?id={user_id}">{first_name}</a> 🎙 sözü izah edir')
 
 
     try:
@@ -708,7 +708,7 @@ async def sessiz_sinema_baslat(message, **kwargs):
     
     oyun_id = int(time.time() * zaman_hassasiyeti)
 
-    callback_button3 = types.InlineKeyboardButton(text="Sözə baxın ⚪️", callback_data="kelime_bak")
+    callback_button3 = types.InlineKeyboardButton(text="Sözə baxın 📍", callback_data="kelime_bak")
     callback_button2 = types.InlineKeyboardButton(text="Sözü keçin ⏩️", callback_data="siradaki_kelime")
     #callback_button = types.InlineKeyboardButton(text="Kelime Yaz ✏️", callback_data="kelime_gir")
     callback_button = types.InlineKeyboardButton(text="Öz sözüm 📝", url=f"https://t.me/blazegameazbot?start={oyun_id}")
@@ -1102,6 +1102,25 @@ Heç bir adam sitat gətirməyib!
         bot.send_message(chat_id, f"Zəhmət olmasa əmri belə daxil edin: /oban {ayrik[2]}", reply_markup=keyboard, reply_to_message_id=message.id)
 
 
+
+@bot.message_handler(commands=['help'])
+def haftalik_grup(message):
+    #chat_tipi = message.chat.type
+
+    chat_id = message.chat.id #değişken, private veya group
+    #user_id = message.from_user.id #sabit
+    soru_suresi = f(f"soru_suresi")  
+    soru_suresi = str(round(soru_suresi/60,1)).replace(".0","")
+
+    bot.send_message(chat_id,f"""🎮 <b>Kömək menyusu</b> 📣
+
+/game - Oyun başlad 🎮
+
+/stop - Oyunu bağla ❌️
+
+/rating - Oyun üzrə ümumi statistika 📈
+
+🙏 Suallarınız üçün: @sjrvan""", parse_mode='html')
 
 @bot.message_handler(commands=['games'])
 async def games(message):
@@ -2489,7 +2508,7 @@ qaliblər 👑
     else:
         await bot.send_message(chat_id, "🧩 Aktif bir oyun yoxdur.")
 
-@bot.message_handler(commands=['help'])
+@bot.message_handler(commands=['rules'])
 async def rehber(message):
     #chat_tipi = message.chat.type
 
@@ -2510,13 +2529,7 @@ async def rehber(message):
 
 📚 Qrupdaxili həftəlik ballar və qlobal həftəlik ballarla yarışlar təşkil edə bilərsiniz.
 
-🧩 Komandalar: 
-/start - bot'u başlat
-/game - Bir yeni oyun başlat
-/rating - Qlobal və çat üzrə reytinq
-
-🙏 Yardım və suallar üçün: @sjrvan yeniliklər bitmir!
-""")
+🙏 Yardım və suallar üçün: @sjrvan yeniliklər bitmir!""")
 
 
 
