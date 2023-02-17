@@ -182,7 +182,7 @@ headers = {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWe
 
 
 def anlam_getir(kelime):
-    js = json.loads(requests.get("https://obastan.com/axtar/?l=az&q"+kelime, headers = headers).content.decode())[0]["anlamlarListe"]
+    js = json.loads(requests.get("https://www.azleks.az/online-dictionary/"+kelime, headers = headers).content.decode())[0]["anlamlarListe"]
     
     ekle = []
     for i in range(len(js)):
@@ -571,11 +571,11 @@ async def start_private(message): #, **kwargs
 
             callback_button = types.InlineKeyboardButton(text="🎴 Qrup'a əlavə et", url="https://t.me/blazegameazbot?startgroup=a")
             callback_button2 = types.InlineKeyboardButton(text="🧛🏻‍♂️ Sahibim", url="https://t.me/Sjrvan")
-            callback_button3 = types.InlineKeyboardButton(text="📁 Rəsmi kanal", url="https://t.me/Blazenews")
+            callback_button3 = types.InlineKeyboardButton(text="📁 Rəsmi kanal", url="https://t.me/Blazenewsaz")
             keyboard.add(callback_button)
             keyboard.add(callback_button2)
             keyboard.add(callback_button3)
-            await bot.send_message(chat_id, f'<b>🙋🏻‍♂️ Salam, mən Blaze!.\n\n🎮 Mən boş zamanlarınızda qruplarınızda əylənmək üçün bir neçə kategoriyadan ibarət söz, tabu oyun botuyam.\n\n🎲 Məni qrupa əlavə edin və mənimlə oynamaq üçün məni Admin et.</b >',  reply_markup=keyboard)
+            await bot.send_message(chat_id, f'<b>🙋🏻‍♂️ Salam, mən Blaze!\n\n🎮 Mən boş zamanlarınızda qruplarınızda əylənmək üçün bir neçə kategoriyadan ibarət söz, tabu oyun botuyam.\n\n🎲 Məni qrupa əlavə edin və mənimlə oynamaq üçün məni Admin et.</b >',  reply_markup=keyboard)
 
 
 
@@ -968,8 +968,8 @@ async def kelime_turet_baslat(message, **kwargs):
 
     text = kwargs.get("text",f"""
 💰 Veriləcək xal: <b>{puan:.1f}</b>
-🎯 Raund: <b>{round_sayisi}/{toplam_round}</b>
-📚 {harf_sayisi} hərf: <code>{harfler}</code>
+⏱️ Raund: <b>{round_sayisi}/{toplam_round}</b>
+🧩 {harf_sayisi} hərf: <code>{harfler}</code>
 🎲 <code>{shuffled}</code>
 """)
 
