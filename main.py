@@ -2160,8 +2160,8 @@ async def callback_inline(cagri): #çağrıcı cagrici
                 zorluk = f(f"games.{oyun_id}.zorluk")
 
                 oyunu_iptal_et(oyun_id)
-                #bot.send_message(chat_id,f'❌ <a href="tg://user?id={user_id}">{first_name}</a> kelimeyi pas geçti! Doğru cevap → <b>{kelime}</b> idi.')
-                await kelime_turet_baslat(cagri.message, toplam_round = toplam_round, round = round, skorlar = skorlar, zorluk = zorluk, header = f'❌ <a href="tg://user?id={user_id}">{first_name}</a> kelimeyi pas geçti! Doğru cevap → <b>{kelime}</b> idi.\n')
+                #bot.send_message(chat_id,f'❌ <a href="tg://user?id={user_id}">{first_name}</a> söz'ü keçdi! Doğru cavab → <b>{kelime}</b> idi.')
+                await kelime_turet_baslat(cagri.message, toplam_round = toplam_round, round = round, skorlar = skorlar, zorluk = zorluk, header = f'❌ <a href="tg://user?id={user_id}">{first_name}</a> sözü keçdi! Doğru cavab → <b>{kelime}</b> idi.\n')
                 #t = threading.Thread(target = kelime_turet_baslat, kwargs = {
                 #    "message" : cagri.message, 
                 #    "toplam_round" : toplam_round, 
