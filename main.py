@@ -2484,10 +2484,9 @@ qaliblər 👑
     else:
         await bot.send_message(chat_id, "🧩 Aktif bir oyun yoxdur.")
 
-@bot.message_handler(commands=['help']) 
-async def help(message):
-    await bot.send_message(chat_id"Blaze Game Əmrləri:\n\n/start - botu başlat\n/game - oyunu başlat\n/stop - oyunu saxla\n/rating - Ümumi istatistika\n/dogruluq - Doğruluq sualı\n/cesaret - Cəsarət sualı\n📣 Xoş oyunlar\nFeedback 📮: @sjrvan")
-
+@bot.message_handler(commands=['komek', 'help'])
+def send_welcome(message):
+    bot.reply_to(message, 'Blaze Game Əmrləri:\n\n/start - Bot'u başlad\n/game - Yeni oyun başlad\n/stop - oyunu dayandır\n/rating - Qruplar üzrə ümumi statistika\n/dogruluq - Doğruluq sualı gətirir\n/cesaret - Cəsarət sualı gətirir')
 
 @bot.message_handler(commands=['ahshsjdjd'])
 async def rehber(message):
