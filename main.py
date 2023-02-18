@@ -575,7 +575,7 @@ async def start_private(message): #, **kwargs
             keyboard.add(callback_button)
             keyboard.add(callback_button2)
             keyboard.add(callback_button3)
-            await bot.send_message(chat_id, f'<b>🙋🏻‍♂️ Salam, mən Blaze!\n\n🎮 Mən boş zamanlarınızda qruplarınızda əylənmək üçün bir neçə kategoriyadan ibarət söz, tabu oyun botuyam.\n\n🎲 Məni qrupa əlavə edin və mənimlə oynamaq üçün məni Admin et.</b >',  reply_markup=keyboard)
+            await bot.send_message(chat_id, f'<b>🙋🏻‍♂️ Salam, mən Blaze!\n\n🎮 Mən boş zamanlarınızda qruplarınızda əylənmək üçün bir neçə kategoriyadan ibarət söz, tabu oyun botuyam.\n\n🎲 Məni qrupa əlavə edin və mənimlə oynamaq üçün məni Admin et.\n\n❔️ əmrlər, komandalar üçün /help yaz</b >',  reply_markup=keyboard)
 
 
 
