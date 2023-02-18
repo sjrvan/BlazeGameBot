@@ -2463,7 +2463,7 @@ qaliblər 👑
                         metin += "▫️ "
 
                     skorlar[i] = round(skorlar[i])
-                    metin += f'<b>{n+1}.</b> {f(f"privates.{i}.first_name")} → <code>{skorlar[i]}</code> puan'
+                    metin += f'<b>{n+1}.</b> {f(f"privates.{i}.first_name")} → <code>{skorlar[i]}</code> xal'
                     
                     metin += "\n"
                 keyboard = types.InlineKeyboardMarkup()
@@ -3128,7 +3128,7 @@ async def game_master():
                                 else:
                                     metin += "▫️ "
 
-                                metin += f'<b>{n+1}.</b> {f(f"privates.{i}.first_name")} → <code>{skorlar[i]:.0f}</code> puan'
+                                metin += f'<b>{n+1}.</b> {f(f"privates.{i}.first_name")} → <code>{skorlar[i]:.0f}</code> xal'
 
                                 metin += "\n"
 
