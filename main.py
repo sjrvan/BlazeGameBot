@@ -570,7 +570,7 @@ async def start_private(message): #, **kwargs
             keyboard = types.InlineKeyboardMarkup()
 
             callback_button = types.InlineKeyboardButton(text="🎴 Qrup'a əlavə et", url="https://t.me/blazegameazbot?startgroup=a")
-            callback_button2 = types.InlineKeyboardButton(text="🧛🏻‍♂️ Sahibim", url="https://t.me/Sjrvan")
+            callback_button2 = types.InlineKeyboardButton(text="🧛🏻‍♂️ Sahibim", url="https://t.me/ekberoffice")
             callback_button3 = types.InlineKeyboardButton(text="📁 Rəsmi kanal", url="https://t.me/Blazenewsaz")
             keyboard.add(callback_button)
             keyboard.add(callback_button2)
