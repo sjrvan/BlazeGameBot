@@ -46,7 +46,7 @@ bot_adi = ""
 if hex(getnode()) in ["0xdc7b23bb434e"]: #windows masaüstü pc ise veya laptop
     #kaç yaşındasın bot
     print("kyb")
-    bot_adi = "@KarabakhSozbot"
+    bot_adi = "@KarabakhSozBot"
     bot_token = "6673495629:AAFVnKoFkucm6OgXE2NKBrbyMcdKm4GLtlA"
     bot = AsyncTeleBot(bot_token, parse_mode="html")
 else:
