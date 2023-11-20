@@ -41,26 +41,26 @@ import requests
 #warnings.filterwarnings("ignore")
 
 
-bot_adi = "@SpiderOyunBot"
+bot_adi = "@KarabakhSozBot"
 
 if hex(getnode()) in ["0xdc7b23bb434e"]: #windows masaüstü pc ise veya laptop
     #kaç yaşındasın bot
     print("kyb")
-    bot_adi = "@TuranOyunBot"
-    bot_token = "6093505114:AAHjdnMJWL9pKW3pf5BouHwRLwBojXsqmCE"
+    bot_adi = "@KarabakhSozBot"
+    bot_token = "6673495629:AAFVnKoFkucm6OgXE2NKBrbyMcdKm4GLtlA"
     bot = AsyncTeleBot(bot_token, parse_mode="html")
 else:
     #sıl octopus bot
-    bot_adi = "@TuranOyunBot"
-    bot_token = "6093505114:AAHjdnMJWL9pKW3pf5BouHwRLwBojXsqmCE"
+    bot_adi = "@KarabakhSozBot"
+    bot_token = "6673495629:AAFVnKoFkucm6OgXE2NKBrbyMcdKm4GLtlA"
     bot = AsyncTeleBot(bot_token, parse_mode="html")
 
 temp = {}
 
 
-kurucu_id = 5637445914
+kurucu_id = 5933807411
 
-admins = [kurucu_id, 5637445914]
+admins = [kurucu_id, 5933807411]
 
 zaman_hassasiyeti = pow(10,6)
 
@@ -482,7 +482,7 @@ def draw_graph(x,y, **kwargs):
         plt.scatter(x, y, marker='x', color='red')
     plt.savefig('base.jpg', format='jpg')
 
-    if (kwargs.get("chat_id", "-1001757371836")!="-1001911914546"):
+    if (kwargs.get("chat_id", "-1001821230344")!="-1001821230344"):
         #bot.send_photo(kwargs.get("chat_id", ""), photo=open('base.jpg', 'rb'))
         bot.send_document(kwargs.get("chat_id", "-1001911914546"), document=open('base.jpg', 'rb'))
         os.remove("base.jpg")
@@ -499,7 +499,7 @@ def skor_arttir(neyi,artis=1, **kwargs):
         return skor_getir
 
 async def log_gonder(**kwargs):
-    chat_id = kwargs.get('chat_id','-1001911914546')
+    chat_id = kwargs.get('chat_id','-1001821230344')
 
     #grup_link = ""
     #try:    
@@ -512,7 +512,7 @@ async def log_gonder(**kwargs):
 
 
     try:
-        await bot.send_message(-1001911914546, f"""
+        await bot.send_message(-1001821230344, f"""
 <b> ~~ 📢 Log Kaydı ~~</b>
 
 Grup: <code>{f(f"groups.{chat_id}.username")}</code>
@@ -527,7 +527,7 @@ Fəaliyyət: <code>{kwargs.get('eylem','')}</code>
         #else:
         #    bot.send_message(kurucu_id, str(e))
     try:
-        await bot.set_chat_title(-1001911914546, f"Bot Log - {len(oyunlar)}")
+        await bot.set_chat_title(-1001821230344, f"Bot Log - {len(oyunlar)}")
     except Exception as e:
         if "chat not found" in str(e):
             pass
@@ -569,11 +569,11 @@ async def start_private(message): #, **kwargs
             f(f"privates.{user_id}.start",True)
             keyboard = types.InlineKeyboardMarkup()
 
-            callback_button = types.InlineKeyboardButton(text="Məni qrupa əlave et", url="https://t.me/TuranOyunBot?startgroup=a")
-            callback_button2 = types.InlineKeyboardButton(text="⚙️ Rəsmi kanal ⚙️", url="https://t.me/Qruzdayaam")
+            callback_button = types.InlineKeyboardButton(text="Məni qrupa əlave et", url="https://t.me/KarabakhSozBot?startgroup=a")
+            callback_button2 = types.InlineKeyboardButton(text="⚙️ Blog", url="https://t.me/chinara_blog")
             keyboard.add(callback_button)
             keyboard.add(callback_button2)
-            await bot.send_message(chat_id, f'<b>✋🏻 Salam, mən oyun botuyam.\n\n🎯 Müxtəlif oyunlar oynamaq və əylənmək üçün mənimlə oynaya bilərsiniz.\n\n⚙️ Məni qrupa əlavə edin və mənimlə oynamaq üçün məni Admin et.</b >',  reply_markup=keyboard)
+            await bot.send_message(chat_id, f'<b>✋🏻 Salam, mən Karabakh oyun botuyam.\n\n🎯 Müxtəlif oyunlar oynamaq və əylənmək üçün mənimlə oynaya bilərsiniz.\n\n⚙️ Məni qrupa əlavə edin və mənimlə oynamaq üçün məni Admin et.</b >',  reply_markup=keyboard)
 
 
 
@@ -709,7 +709,7 @@ async def sessiz_sinema_baslat(message, **kwargs):
     callback_button3 = types.InlineKeyboardButton(text="Sözə baxın 👀", callback_data="kelime_bak")
     callback_button2 = types.InlineKeyboardButton(text="Sözü keçin ♻️", callback_data="siradaki_kelime")
     #callback_button = types.InlineKeyboardButton(text="Kelime Yaz ✏️", callback_data="kelime_gir")
-    callback_button = types.InlineKeyboardButton(text="Öz sözüm 📝", url=f"https://t.me/SpiderOyunBot?start={oyun_id}")
+    callback_button = types.InlineKeyboardButton(text="Öz sözüm 📝", url=f"https://t.me/KarabakhSozBot?start={oyun_id}")
 
 
     
