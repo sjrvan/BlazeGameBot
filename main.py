@@ -46,13 +46,13 @@ bot_adi = ""
 if hex(getnode()) in ["0xdc7b23bb434e"]: #windows masaüstü pc ise veya laptop
     #kaç yaşındasın bot
     print("kyb")
-    bot_adi = "@Trendyoloyun_bot"
-    bot_token = "6099685272:AAGKOCroyciiDDFimafA4zJhlXIewbUMv-8"
+    bot_adi = "@KarabakhSozbot"
+    bot_token = "6673495629:AAFVnKoFkucm6OgXE2NKBrbyMcdKm4GLtlA"
     bot = AsyncTeleBot(bot_token, parse_mode="html")
 else:
     #sıl octopus bot
-    bot_adi = "@Trendyoloyun_bot"
-    bot_token = "6099685272:AAGKOCroyciiDDFimafA4zJhlXIewbUMv-8"
+    bot_adi = "@KarabakhSozBot"
+    bot_token = "6673495629:AAFVnKoFkucm6OgXE2NKBrbyMcdKm4GLtlA"
     bot = AsyncTeleBot(bot_token, parse_mode="html")
 
 temp = {}
@@ -569,13 +569,13 @@ async def start_private(message): #, **kwargs
             f(f"privates.{user_id}.start",True)
             keyboard = types.InlineKeyboardMarkup()
 
-            callback_button = types.InlineKeyboardButton(text="🎴 Qrup'a əlavə et", url="https://t.me/blazegameazbot?startgroup=a")
-            callback_button2 = types.InlineKeyboardButton(text="🧛🏻‍♂️ Sahibim", url="https://t.me/ekberoffice")
-            callback_button3 = types.InlineKeyboardButton(text="📁 Rəsmi kanal", url="https://t.me/Blazenewsaz")
+            callback_button = types.InlineKeyboardButton(text="🎴 Qrup'a əlavə et", url="https://t.me/karabakhsozbot?startgroup=a")
+            callback_button2 = types.InlineKeyboardButton(text="🧛🏻‍♂️ Blog", url="https://t.me/chinara_blog")
+            callback_button3 = types.InlineKeyboardButton(text="📁 Mafia Qrupumuz", url="https://t.me/KMmafiaa")
             keyboard.add(callback_button)
             keyboard.add(callback_button2)
             keyboard.add(callback_button3)
-            await bot.send_message(chat_id, f'<b>🙋🏻‍♂️ Salam, mən Blaze!\n\n🎮 Mən boş zamanlarınızda qruplarınızda əylənmək üçün bir neçə kategoriyadan ibarət söz, tabu oyun botuyam.\n\n🎲 Məni qrupa əlavə edin və mənimlə oynamaq üçün məni Admin et.\n\n❔️ əmrlər, komandalar üçün /help yaz</b >',  reply_markup=keyboard)
+            await bot.send_message(chat_id, f'<b>🙋🏻‍♂️ Salam, mən Karabakh Soz!\n\n🎮 Mən boş zamanlarınızda qruplarınızda əylənmək üçün bir neçə kategoriyadan ibarət söz, tabu oyun botuyam.\n\n🎲 Məni qrupa əlavə edin və mənimlə oynamaq üçün məni Admin et.</b >',  reply_markup=keyboard)
 
 
 
